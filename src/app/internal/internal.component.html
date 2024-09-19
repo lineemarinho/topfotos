@@ -1,0 +1,159 @@
+<app-header></app-header>
+<section class="py-12 bg-gray-50 sm:py-16">
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+    <nav class="flex">
+      <ol role="list" class="flex items-center space-x-0.5">
+        <li>
+          <div class="-m-1">
+            <a
+              href="#"
+              class="p-1 text-sm font-medium text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:text-gray-900 focus:ring-gray-900 hover:text-gray-700"
+            >
+              Home
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="flex items-center">
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-gray-300"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              aria-hidden="true"
+            >
+              <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+            </svg>
+            <div class="-m-1">
+              <a
+                href="#"
+                class="p-1 ml-0.5 text-sm font-medium text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:text-gray-900 focus:ring-gray-900 hover:text-gray-700"
+              >
+                Fotos
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="flex items-center">
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-gray-300"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              aria-hidden="true"
+            >
+              <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+            </svg>
+            <div class="-m-1">
+              <a
+                href="#"
+                class="p-1 ml-0.5 text-sm font-medium text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:text-gray-900 focus:ring-gray-900 hover:text-gray-700"
+                aria-current="page"
+              >
+                Maratona Internacional de São Paulo
+              </a>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </nav>
+
+    <div
+      class="grid grid-cols-1 mt-8 lg:grid-rows-1 gap-y-12 lg:mt-12 lg:grid-cols-5 lg:gap-y-16 lg:gap-x-12 xl:gap-x-16"
+    >
+      <div class="lg:col-span-3 lg:row-end-1">
+        <div class="lg:flex lg:items-start">
+          <div class="lg:order-2 lg:ml-5">
+            <div class="overflow-hidden border-2 border-transparent rounded-lg">
+              <img
+                class="object-cover w-full h-full"
+                src="https://s2-ge.glbimg.com/cco2ysRlaOGERgSxKVMwknDfygI=/0x0:1497x2000/984x0/smart/filters:strip_icc()/s.glbimg.com/es/ge/f/original/2019/09/14/gallerypic_1_g4adz8W.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2 lg:row-end-2 lg:row-span-2">
+        <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
+          Maratona Internacional de São Paulo
+        </h1>
+
+        <div class="flex items-center mt-8">
+          <p class="text-3xl font-bold text-gray-900">R$ 10,00</p>
+          <p class="ml-2 text-2xl font-bold text-gray-500">
+            <del>R$ 11,00 </del>
+          </p>
+        </div>
+
+        <div class="flex items-center mt-3 text-sm font-medium text-gray-500">
+          <svg
+            class="w-4 h-4 mr-2.5 text-gray-400"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          Compra segura e protegida
+        </div>
+
+        <h2 class="mt-8 text-base font-bold text-gray-900">
+          O que está incluso
+        </h2>
+        <ul
+          class="mt-4 space-y-3 text-base font-medium text-gray-600 list-disc list-inside"
+        >
+          <li>Foto em alta resolução</li>
+          <li>
+            Compra garantida, download da foto automático após a finalização da
+            compra
+          </li>
+          <li>Baixe a foto de onde e quando quiser pelo período de 12 meses</li>
+        </ul>
+
+        <div class="flex items-center mt-10 space-x-4">
+          <button
+            type="button"
+            (click)="toggleCart()"
+            class="inline-flex items-center justify-center px-12 py-3 text-base font-bold leading-7 text-white transition-all duration-200 bg-blue-600 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-700"
+          >
+            Adicionar ao carrinho
+          </button>
+        </div>
+
+        <ul class="mt-8 space-y-3">
+          <li class="flex items-center text-sm font-medium text-gray-500">
+            <svg
+              class="w-5 h-5 mr-2.5 text-gray-400"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+              />
+            </svg>
+            100% Pagamento Seguro
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
+
+<app-cart *ngIf="showCart"></app-cart>
