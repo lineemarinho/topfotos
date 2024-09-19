@@ -1,0 +1,65 @@
+<app-header></app-header>
+<section class="py-10 bg-gray-100 sm:py-16 lg:py-24">
+  <div class="max-w-3xl px-4 mx-auto sm:px-6 lg:px-8">
+    <div class="bg-white rounded-lg shadow-lg">
+      <div class="p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-gray-800 text-center">
+          Pague R$ 6,00 via Pix para baixar suas fotos
+        </h2>
+
+        <div class="mt-6 text-center">
+          <h3 class="text-lg font-bold text-gray-800">
+            Escaneie o QR Code para pagar
+          </h3>
+
+          <p class="mt-4 text-sm font-medium text-gray-500">
+            Como realizar o pagamento
+          </p>
+
+          <ol class="mt-2 text-sm text-gray-600">
+            <li>1. Abra o aplicativo do seu banco.</li>
+            <li>2. Escolha pagar via Pix.</li>
+            <li>3. Aponte a câmera do seu celular para o QR Code abaixo.</li>
+          </ol>
+
+          <!-- QR Code -->
+          <div class="mt-6">
+            <img
+              class="inline-block"
+              src="https://api.qrserver.com/v1/create-qr-code/?data=SampleData&size=200x200"
+              alt="QR Code Pix" />
+          </div>
+
+          <p class="mt-4 text-sm text-gray-600">
+            ⓘ Pague e receba suas fotos na hora por e-mail e no navegador.
+          </p>
+          <p class="text-xs text-gray-400">
+            Código expira em aproximadamente 1 hora.
+          </p>
+
+          <div class="mt-6">
+            <p class="text-sm font-medium text-gray-700">
+              Ou copie o código Pix abaixo
+            </p>
+            <div
+              class="mt-2 border border-gray-300 p-4 rounded-md bg-gray-50 text-gray-700 text-xs break-all">
+              00020101021226820014br.gov.bcb.pix2560pix.stone.com.br/pix/v2/6fda2df4-7a51-42ce-9dd5-30278a71ab5d52040000530398654046.005802BR5923Pagar.me
+            </div>
+
+            <button
+              class="mt-4 w-full inline-flex items-center justify-center px-4 py-3 text-sm font-semibold text-white bg-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 hover:bg-blue-700"
+              (click)="copyPixCode()">
+              Copiar código Pix
+            </button>
+          </div>
+
+          <p class="mt-6 text-sm text-gray-500">
+            Caso já tenha realizado o pagamento
+            <a href="#" class="text-blue-600 hover:underline">clique aqui</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

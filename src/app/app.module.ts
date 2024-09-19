@@ -17,6 +17,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { CartFixedComponent } from './components/cart-fixed/cart-fixed.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { PixComponent } from './pix/pix.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { AboutComponent } from './about/about.component';
     GalleryComponent,
     CartFixedComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    PixComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
