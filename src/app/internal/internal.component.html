@@ -1,63 +1,7 @@
-<app-header></app-header>
-<section class="py-12 bg-gray-50 sm:py-16">
+<section class="py-2 sm:py-4">
   <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-    <nav class="flex">
-      <ol role="list" class="flex items-center space-x-0.5">
-        <li>
-          <div class="-m-1">
-            <a
-              href="#"
-              class="p-1 text-sm font-medium text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:text-gray-900 focus:ring-gray-900 hover:text-gray-700">
-              Home
-            </a>
-          </div>
-        </li>
-
-        <li>
-          <div class="flex items-center">
-            <svg
-              class="flex-shrink-0 w-5 h-5 text-gray-300"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              aria-hidden="true">
-              <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
-            </svg>
-            <div class="-m-1">
-              <a
-                href="#"
-                class="p-1 ml-0.5 text-sm font-medium text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:text-gray-900 focus:ring-gray-900 hover:text-gray-700">
-                Fotos
-              </a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="flex items-center">
-            <svg
-              class="flex-shrink-0 w-5 h-5 text-gray-300"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              aria-hidden="true">
-              <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
-            </svg>
-            <div class="-m-1">
-              <a
-                href="#"
-                class="p-1 ml-0.5 text-sm font-medium text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:text-gray-900 focus:ring-gray-900 hover:text-gray-700"
-                aria-current="page">
-                Maratona Internacional de São Paulo
-              </a>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </nav>
-
     <div
-      class="grid grid-cols-1 mt-8 lg:grid-rows-1 gap-y-12 lg:mt-12 lg:grid-cols-5 lg:gap-y-16 lg:gap-x-12 xl:gap-x-16">
+      class="grid grid-cols-1 lg:grid-rows-1 gap-y-12 lg:mt-12 lg:grid-cols-5 lg:gap-y-16 lg:gap-x-12 xl:gap-x-16">
       <!-- Imagem Grande -->
       <div class="lg:col-span-3 lg:row-end-1">
         <div class="lg:flex lg:items-start">
@@ -69,37 +13,12 @@
                 alt="Imagem selecionada" />
             </div>
           </div>
-
-          <!-- Miniaturas -->
-          <div
-            class="w-full lg:w-32 mt-2.5 lg:mt-0 lg:flex-shrink-0 lg:order-1">
-            <div
-              class="flex flex-row items-stretch lg:flex-col lg:space-y-5 space-x-2.5 lg:space-x-0">
-              <button
-                *ngFor="let img of images"
-                (click)="selectImage(img)"
-                class="flex-1">
-                <div
-                  class="overflow-hidden border-2"
-                  [ngClass]="{
-                    'border-blue-700': img === selectedImage,
-                    'border-transparent': img !== selectedImage
-                  }"
-                  class="rounded-lg aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3">
-                  <img
-                    class="object-cover w-full h-full"
-                    [src]="img"
-                    alt="Miniatura" />
-                </div>
-              </button>
-            </div>
-          </div>
         </div>
       </div>
 
       <!-- Informações do Produto -->
       <div class="lg:col-span-2 lg:row-end-2 lg:row-span-2">
-        <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
+        <h1 class="text-2xl font-bold text-gray-900 sm:text-2xl">
           Maratona Internacional de São Paulo
         </h1>
 
@@ -137,11 +56,12 @@
           <li>Baixe a foto de onde e quando quiser pelo período de 12 meses</li>
         </ul>
 
+        <!-- Adicionar ao carrinho - Fixo no fundo para mobile -->
         <div class="flex items-center mt-10 space-x-4">
           <button
             type="button"
             (click)="toggleCart()"
-            class="inline-flex items-center justify-center px-12 py-3 text-base font-bold leading-7 text-white transition-all duration-200 bg-blue-600 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-700">
+            class="items-center hidden sm:block justify-center px-12 py-3 text-base font-bold leading-7 text-white transition-all duration-200 bg-blue-600 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-700">
             Adicionar ao carrinho
           </button>
         </div>
@@ -166,8 +86,14 @@
       </div>
     </div>
   </div>
+
+  <!-- Botão fixo no fundo da tela em mobile -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white p-4 z-50 sm:hidden">
+    <button
+      type="button"
+      (click)="toggleCart()"
+      class="w-full inline-flex items-center justify-center px-12 py-3 text-base font-bold leading-7 text-white transition-all duration-200 bg-blue-600 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-700">
+      Adicionar ao carrinho
+    </button>
+  </div>
 </section>
-
-<app-footer></app-footer>
-
-<app-cart *ngIf="showCart"></app-cart>

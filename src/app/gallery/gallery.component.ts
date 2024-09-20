@@ -7,6 +7,8 @@ import { Component } from "@angular/core";
 })
 export class GalleryComponent {
   card = false;
+  openListImg = false;
+  options = false;
   imgs = [
     {
       img: "https://webvolei.com.br/wp-content/uploads/2021/08/395259_979267_rosamaria_russia_web_.jpg",
@@ -24,4 +26,18 @@ export class GalleryComponent {
   gocard() {
     this.card = true;
   }
+  open() {
+    this.openListImg = true;
+  }
+  search() {
+    this.options = true;
+  }
+  nextImage() {}
+  prevImage() {}
+  close() {
+    this.openListImg = false;
+  }
+  closeModal() {}
+  uploadPhoto() {}
+  takeSelfie() {}
 }
