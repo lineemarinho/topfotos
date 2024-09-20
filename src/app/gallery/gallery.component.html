@@ -190,27 +190,22 @@
 <div
   *ngIf="openListImg"
   class="fixed inset-0 bg-black h-full bg-opacity-50 flex items-center justify-center z-50">
-  <!-- Conteúdo do modal -->
   <div
     class="bg-white rounded-lg relative z-50 w-full max-w-5xl p-12 sm:p-6 max-h-screen overflow-y-auto">
-    <!-- Seta Esquerda -->
     <button
       (click)="prevImage()"
       class="absolute left-0 top-1/2 transform -translate-y-1/2 text-black text-4xl font-bold px-4 focus:outline-none z-50">
       <img width="40" src="../../assets/images/left.png" />
     </button>
 
-    <!-- Botão de fechar -->
     <button
       (click)="close()"
       class="absolute top-4 font-bold right-4 text-blue-700">
       Fechar
     </button>
 
-    <!-- Conteúdo do modal -->
     <app-internal></app-internal>
 
-    <!-- Seta Direita -->
     <button
       (click)="nextImage()"
       class="absolute right-0 top-1/2 transform -translate-y-1/2 text-black text-4xl font-bold px-4 focus:outline-none z-50">
@@ -219,12 +214,10 @@
   </div>
 </div>
 
-<!-- Modal -->
 <div
   *ngIf="options"
   class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg w-full max-w-md p-6 relative">
-    <!-- Botão de Fechar -->
     <button (click)="closeModal()" class="absolute top-4 right-4 text-gray-500">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -240,12 +233,10 @@
       </svg>
     </button>
 
-    <!-- Conteúdo do Modal -->
     <h2 class="text-xl font-bold text-gray-900 text-center">
       Reconhecimento facial
     </h2>
 
-    <!-- Imagem -->
     <div class="flex justify-center my-6">
       <img
         src="../../assets/images/search.svg"
@@ -253,12 +244,10 @@
         class="w-32 h-32 object-cover" />
     </div>
 
-    <!-- Texto de Instrução -->
     <p class="text-gray-700 text-center mb-6">
       Tire uma selfie ou envie uma foto sua para se encontrar na galeria.
     </p>
 
-    <!-- Botões -->
     <div class="grid w-full gap-3">
       <button
         (click)="uploadPhoto()"
